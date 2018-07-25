@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="background_dark">#d4d4d4</color>
+<color name="sub_text_color">#ffb2b2b2</color>
+<color name="green">#45c01a</color>
+<color name="status_text_head">#4e7777</color>
+<color name="selected_status">#336699</color>
+<color name="splash_background_top">#39b44a</color>
+<color name="splash_background_bottom">#0fad68</color>
+<color name="colorPrimary">#3F51B5</color>
+<color name="colorPrimaryDark">#303F9F</color>
+<color name="colorAccent">#2bacfe</color>
+<color name="actionModeBackground">#00897b</color>
+<color name="colorControlActivated">#b6dbe0</color>
+<color name="attach_view_circle_background_color">#02a8f3</color>
+
+</resources>

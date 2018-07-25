@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/attach_options_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/attach_views_container_height"
+    card_view:cardCornerRadius="4dp"
+    android:visibility="invisible">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/attach_options_container_horizontal_padding"
+        android:paddingRight="@dimen/attach_options_container_horizontal_padding"
+        android:paddingTop="@dimen/attach_options_container_vertical_padding"
+        android:paddingBottom="@dimen/attach_options_container_vertical_padding"
+        android:background="@android:color/background_light">
+            <Button
+                android:id="@+id/attach_from_gallery"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/attach_option_size"
+                android:drawableTop="@drawable/attach_photo_background"
+                android:background="@null"
+                android:text="@string/gallery"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <Button
+                android:id="@+id/attach_location"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/attach_option_size"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/location"
+                android:textColor="?android:attr/textColorSecondary"
+                android:drawableTop="@drawable/attach_location_background" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "942241101001",
+    "firebase_url": "https://letzchat-e01d0.firebaseio.com",
+    "project_id": "letzchat-e01d0",
+    "storage_bucket": "letzchat-e01d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942241101001:android:0ba9ecf55d8af651",
+        "android_client_info": {
+          "package_name": "com.app.letzchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942241101001-jc6snli41qbbc30btjqa33q4ro74c1fm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.letzchat",
+            "certificate_hash": "a86eaa5806d54af44a6c7744b0526aabef977601"
+          }
+        },
+        {
+          "client_id": "942241101001-ch2q4bd4tajp8i2ug2rkrk47f94fagi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6xHceaAPJOLPdUmR0QS_ZtU3Hyc5gZY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942241101001-ch2q4bd4tajp8i2ug2rkrk47f94fagi1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

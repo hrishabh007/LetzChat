@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.letzchat">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+    <application
+        android:name=".service.MyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".StartupActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignupActivity" />
+
+        <activity android:name=".LoginActivity" />
+
+        <activity android:name=".MainActivity" android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".ChatActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:theme="@style/ChatActivity" android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".SearchUserActivity" android:label="@string/search_contact" />
+
+        <activity android:name=".SetStatusActivity" android:label="@string/status" android:theme="@style/AppTheme" />
+
+        <activity android:name=".ContactRequestListActivity" android:label="@string/new_contacts" android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name="de.duenndns.ssl.MemorizingActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity android:name="com.android.camera.CropImage" />
+
+        <activity android:name=".UserProfileActivity" android:label="@string/contact_profile" android:theme="@style/AppTheme" />
+
+        <activity android:name=".SettingsActivity" android:label="@string/settings" android:hardwareAccelerated="false" />
+
+        <activity android:name=".ServerSettingsActivity" android:label="@string/server" />
+
+        <receiver android:name=".receivers.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receivers.ShutDownReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receivers.IncomingContactRequestReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.app.letzchat.intent.action.CONTACT_REQUEST_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receivers.NetworkReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.MessageService" android:exported="false" />
+
+        <provider android:name=".providers.DatabaseContentProvider" android:authorities="com.app.letzchat.provider" android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAYzWJtsqrVSM_7BsCXGT9JT6Y3n83jOKI"/>
+    </application>
+
+
+</manifest>
